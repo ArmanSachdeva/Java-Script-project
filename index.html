@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>StopWatch</title>
+
+	<!-- External CSS -->
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<button class="tablink" onclick="openPage('clock', this, 'red')">Clock</button>
+	<button class="tablink" onclick="openPage('timer', this, 'green')" id="defaultOpen">Countdown</button>
+	<button class="tablink" onclick="openPage('Stopwatch', this, 'blue')">Timer</button>
+	<div id="clock" class="tabcontent">
+		<h1>Clock</h1>
+		<div class="outer-circle">
+			<div class="inner-circle">
+				<span id="clock-text" class="text">0 : 0 : 0 AM</span>
+			</div>
+		</div>
+	</div>
+	<div id="timer" class="tabcontent">
+		<h1>Countdown</h1>
+		<div class="container">
+			<div class="watch">
+				<div class="outer-circle">
+					<div class="inner-circle" id="clock-inside">
+						<span class="text timer-hour">0 :</span>
+						<span class="text timer-minute">&nbsp;0 :</span>
+						<span class="text timer-second">&nbsp;0</span>
+					</div>
+				</div>
+				<div class="time-input" style="position: center; padding: 20px;">
+					<input type="text" id="timer-hour" placeholder="Hour"><br>
+ 					<input type="text" id="timer-minute" placeholder="Min"><br>
+ 					<input type="text" id="timer-second" placeholder="Second"><br>
+				</div>
+				<div class="button-wrapper">
+					  <button class="button hidden" id="timer-reset">Reset</button>
+					  <button class="button" id="timer-start">Start</button>
+					  <button class="button hidden" id="timer-play">Play</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="Stopwatch" class="tabcontent">
+		<h1>Timer</h1>
+		<div class="container">
+			<div class="watch">
+				<div class="outer-circle">
+					<div class="inner-circle">
+						<span class="text minute">0 :</span>
+						<span class="text sec">&nbsp;0 :</span>
+						<span class="text msec">&nbsp;0</span>
+					</div>
+				</div>
+				<div class="button-wrapper">
+					<button class="button reset hidden" >Reset</button>
+					<button class="button play" >Play</button>
+					<button class="button lap hidden" >Lap</button>
+				</div>
+			</div>
+			<ul class="laps">
+				<button class="lap-clear-button hidden">Clear All</button>
+			</ul>
+		</div>
+	</div>
+	<!-- External JS -->
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
